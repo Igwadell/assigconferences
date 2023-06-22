@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Conference</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'conferences/styles.css' %}">
+</head>
+<body>
+    <h1>Create Conference</h1>
+    <form method="POST" action="{% url 'conferences:conference_create' %}">
+        {% csrf_token %}
+        <!-- Include form fields for conference creation -->
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>

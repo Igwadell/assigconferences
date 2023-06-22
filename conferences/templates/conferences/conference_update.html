@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Conference</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'conferences/styles.css' %}">
+</head>
+<body>
+    <h1>Update Conference</h1>
+    <form method="POST" action="{% url 'conferences:conference_update' conference.id %}">
+        {% csrf_token %}
+        <!-- Include form fields to update conference details -->
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>

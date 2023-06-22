@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference Details</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'conferences/styles.css' %}">
+</head>
+<body>
+    <h1>Conference Details</h1>
+    <h2>{{ conference.title }}</h2>
+    <p>Date: {{ conference.date }}</p>
+    <p>Location: {{ conference.location }}</p>
+    <!-- Include additional conference details as needed -->
+    <a href="{% url 'conferences:conference_update' conference.id %}">Edit</a>
+    <a href="{% url 'conferences:conference_delete' conference.id %}">Delete</a>
+</body>
+</html>
